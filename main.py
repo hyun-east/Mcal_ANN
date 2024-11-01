@@ -12,6 +12,7 @@ Y_test = np.eye(10)[Test.iloc[1000:2000, 0].values]
 
 
 
+
 network = Network(loss_func=cross_entropy, loss_func_derivative=cross_entropy_derivative)
 network.add_layer(784, 128, relu, relu_derivative)
 network.add_layer(128, 64, relu, relu_derivative)
