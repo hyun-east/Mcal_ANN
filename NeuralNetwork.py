@@ -14,7 +14,7 @@ def leakyrelu(x):
     return np.maximum(-0.1 * x, x)
 
 
-def leaky_relu_derivative(x):
+def leakyrelu_derivative(x):
     return np.where(x > 0, 1, -0.1)
 
 
@@ -103,6 +103,8 @@ class Network:
 
             self.loss_history.append(epoch_loss)
             self.accuracy_history.append(epoch_accuracy)
+
+
 
             print(f'Epoch {epoch + 1}/{epochs}, Loss: {epoch_loss}, Accuracy: {epoch_accuracy * 100:.2f}%')
 
